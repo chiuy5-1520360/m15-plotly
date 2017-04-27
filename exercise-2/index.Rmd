@@ -1,0 +1,18 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+install.packages("plotly")
+library(plotly)
+
+beavers.df <- data.frame(beaver1)
+plot_ly(beavers.df, x = ~time, y = ~temp, type = 'scatter',
+        textpostion = 'middle', textfont = list(color = '#000000', size = 16)) %>%
+        layout(title = "Body Temperature of a Beaver Over Time",
+               xaxis = list(title = 'Time (hh:mm format)'),
+               yaxis = list(title = 'Temperature (C)'))
+```
+
